@@ -9,7 +9,7 @@ try:
     import pypandoc
     readme = pypandoc.convert_file('README.md', 'rst')
 except (IOError, ImportError):
-    readme = open('README.md').read()
+    readme = open('README.md', encoding="utf-8").read()
 
 tests_requires = [
     "pytest-pep8",
